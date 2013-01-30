@@ -3,11 +3,14 @@ import os
 
 import httplib2
 
+import xml.etree.ElementTree as ET
+
 http = httplib2.http()
 
 resp, content = http.request("http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22")
 
-print content
+#print content
+
 
 
 #count = 0
