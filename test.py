@@ -13,7 +13,7 @@ feed = feedparser.parse(url)
 for post in feed.entries:
 	title = post.title
 	link = post.link
-	for stuff_i_like in list_of_stuff_i_like:
+	for stuff_i_like in list_of_stuff_i_want:
 		if re.match(stuff_i_like, title, re.I):
 			print "Found " + stuff_i_like + " !\n"
 			
