@@ -4,29 +4,24 @@ import re
 import feedparser
 import urllib
 
-<<<<<<< HEAD
-import xml.etree.ElementTree as ET
+list_of_stuff_i_want = ["Life.on.fire", "Austin.City.Limits", "Moving.On"]
 
-http = httplib2.http()
-=======
->>>>>>> !
 
 url = 'http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22' 
 
-<<<<<<< HEAD
-#print content
-
-=======
 feed = feedparser.parse(url)
 for post in feed.entries:
 	title = post.title
 	link = post.link
+	for stuff_i_like in list_of_stuff_i_like:
+		if re.match(stuff_i_like, title, re.I):
+			print "Found " + stuff_i_like + " !\n"
+			
 #	for series in title:
 #		match = re.match('Face', series, re.I)
 #		search = re.search()
 #		print match
 		
->>>>>>> !
 
 #p = re.compile( ... )
 #m = p.match( 'string goes here' )
@@ -37,6 +32,6 @@ for post in feed.entries:
 	
 
 	
-urllib.urlretrieve ("http://www.example.com/sometorrent.torrent", "torrentname.torrent")
+#urllib.urlretrieve ("http://www.example.com/sometorrent.torrent", "torrentname.torrent")
 
-urllib.urlcleanup()
+#urllib.urlcleanup()
