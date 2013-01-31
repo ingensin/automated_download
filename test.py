@@ -3,6 +3,26 @@
 import re
 import feedparser
 import urllib
+import MySQLdb
+
+
+
+db = MySQLdb.connect(host="localhost", port=3306, user="internet", passwd="pfmysql99", db="python")
+cursor = db.cursor()
+
+count = cursor.execute("SELECT * FROM wish_list")
+
+items = cursor.fetchall()
+for item in items:
+	print item
+
+
+
+return
+
+
+
+
 
 watch_folder = '/volume1/script/test_watchfolder'
 url = 'http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22' 
@@ -10,7 +30,8 @@ list_of_stuff_i_want = ["Life.on.fire", "Austin.City.Limits", "Moving.On"]
 
 
 def download_torrent(link, title, torrent_folder):
-	urllib.urlretrieve ( "http://yodudexxxxy.com/thefile.torrent", torrent_folder + "/" + title.replace(" ", ".") + ".torrent")
+	filename = torrent_folder + "/" + title.replace(" ", ".") + ".torrent"
+	urllib.urlretrieve ( link, filename)
 
 
 
