@@ -4,7 +4,7 @@ import re
 import feedparser
 import urllib
 import MySQLdb
-
+import sys
 
 
 db = MySQLdb.connect(host="localhost", port=3306, user="internet", passwd="pfmysql99", db="python")
@@ -18,7 +18,7 @@ for item in items:
 
 
 
-return
+sys.exit()
 
 
 
