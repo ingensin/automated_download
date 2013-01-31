@@ -1,22 +1,42 @@
 #!/usr/bin/python
-import os
 
-import httplib2
+import re
+import feedparser
+import urllib
 
+<<<<<<< HEAD
 import xml.etree.ElementTree as ET
 
 http = httplib2.http()
+=======
+>>>>>>> !
 
-resp, content = http.request("http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22")
+url = 'http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22' 
 
+<<<<<<< HEAD
 #print content
 
+=======
+feed = feedparser.parse(url)
+for post in feed.entries:
+	title = post.title
+	link = post.link
+#	for series in title:
+#		match = re.match('Face', series, re.I)
+#		search = re.search()
+#		print match
+		
+>>>>>>> !
 
+#p = re.compile( ... )
+#m = p.match( 'string goes here' )
+#if m:
+#    print 'Match found: ', m.group()
+#else:
+#    print 'No match'
+	
 
-#count = 0
-#files = os.listdir("/volume1/transmission/")
-#for file in files:
-#	print file
-#	count = count+1
-#
-#print count
+	
+urllib.urlretrieve ("http://www.example.com/sometorrent.torrent", "torrentname.torrent")
+
+urllib.urlcleanup()
