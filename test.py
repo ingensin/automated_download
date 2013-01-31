@@ -6,7 +6,7 @@ import urllib
 
 
 def download_torrent(link, title):
-	urllib.urlretrieve (link, title + ".torrent")
+	urllib.urlretrieve (link, title.replace(" ", ".") + ".torrent")
 
 list_of_stuff_i_want = ["Life.on.fire", "Austin.City.Limits", "Moving.On"]
 
