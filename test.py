@@ -10,7 +10,7 @@ list_of_stuff_i_want = ["Life.on.fire", "Austin.City.Limits", "Moving.On"]
 
 
 def download_torrent(link, title, torrent_folder):
-	urllib.urlretrieve (link + "wtf", torrent_folder + "/" + title.replace(" ", ".") + ".torrent")
+	urllib.urlretrieve ( "wtf" + link + "wtf", torrent_folder + "/" + title.replace(" ", ".") + ".torrent")
 
 
 
