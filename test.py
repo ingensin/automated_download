@@ -4,6 +4,10 @@ import re
 import feedparser
 import urllib
 
+
+def download_torrent(link, title):
+	urllib.urlretrieve (link, title + ".torrent")
+
 list_of_stuff_i_want = ["Life.on.fire", "Austin.City.Limits", "Moving.On"]
 
 
@@ -15,6 +19,7 @@ for post in feed.entries:
 	link = post.link
 	for stuff_i_like in list_of_stuff_i_want:
 		if re.match(stuff_i_like, title, re.I):
+			download_torrent(link, title)
 			print "Found " + stuff_i_like + " !\n"
 			
 #	for series in title:

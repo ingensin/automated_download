@@ -1,0 +1,6 @@
+Hente RSS fra Server
+	Pakke ut gzip
+	XML Parse koden
+	Sortere ut hvilken serier/filmer jeg vil ha
+	Se om jeg har Serien/filmen fra før
+	Lagre at den har lastet ned filen
