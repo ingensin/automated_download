@@ -7,7 +7,7 @@ import MySQLdb
 import sys
 
 
-db = MySQLdb.connect(host="localhost", port=3306, user="internet", passwd="pfmysql99", db="python")
+db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL412", db="script")
 cursor = db.cursor()
 
 count = cursor.execute("SELECT * FROM wish_list")
