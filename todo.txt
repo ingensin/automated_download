@@ -4,3 +4,7 @@ Hente RSS fra Server
 	Sortere ut hvilken serier/filmer jeg vil ha
 	Se om jeg har Serien/filmen fra før
 	Lagre at den har lastet ned filen
+
+
+
+Teste
