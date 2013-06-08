@@ -1,14 +1,21 @@
-Hente RSS fra Server
+Lage databasene
+	- series
+	- movies
+	- downloaded_series
+	- downloaded_movies
+	- rss_servers
+	- 
+Hente RSS fra Server i forrhol til hva databesen series/movies ønsker
 	Pakke ut gzip
-	XML Parse koden
-	Sortere ut hvilken serier/filmer jeg vil ha
-	Se om jeg har Serien/filmen fra før
-	Lagre at den har lastet ned filen
+	XML Parse koden (http://getpython3.com/diveintopython3/xml.html#xml-parse)
+	Sortere ut hvilken serier/filmer jeg vil ha fra databasen series/movies
+	Se om jeg har Serien/filmen fra før i databasen downloaded_series/movies
+	Lagre at den har lastet ned filen i databasen downloaded_series/movies
 
 
-More more moer
-Teste
-askcjaskcmabn,manms
-grrrr!!!!
+Behandle ferdige filer
+	i mappen /volume1/transmission ligger alle filene som blir lastet ned.
+	hente informasjon fra Transmission
+	pakke ut filene som trenger det. også undeteksten
+	
 
-lskdjklfjsldkfj
