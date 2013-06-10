@@ -31,5 +31,5 @@ def main(argv):
 	print "Accuracy with math.pi: " + str(accuracy)
 	
 if __name__ == "__main__":
-	main(sys.argv[1:])
+	main(sys.argv[3:])
 ## end of http://code.activestate.com/recipes/578548/ }}}
