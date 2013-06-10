@@ -1,10 +1,10 @@
 Lage databasene
-	- series
-	- movies
-	- downloaded_series
-	- downloaded_movies
-	- rss_servers
-	- 
+done	- series
+done	- movies
+done	- downloaded_series
+done	- downloaded_movies
+done	- rss_servers
+		- 
 Hente RSS fra Server i forrhol til hva databesen series/movies ønsker
 	Pakke ut gzip
 	XML Parse koden (http://getpython3.com/diveintopython3/xml.html#xml-parse)
@@ -18,4 +18,8 @@ Behandle ferdige filer
 	hente informasjon fra Transmission
 	pakke ut filene som trenger det. også undeteksten
 	
+TV			http://www.torrentday.com/torrents/rss?download;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22
+Filmer		http://www.torrentday.com/torrents/rss?download;11;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22
+TV resten	http://www.torrentday.com/torrents/rss?download;24;26;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22
 
+			http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22
