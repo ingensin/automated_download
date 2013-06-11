@@ -23,13 +23,17 @@ def get_list_of_rss_servers():
 	cursor = db.cursor()
 	rss_server = cursor.execute("SELECT id, url FROM rss_server")
 	rss_servers = cursor.fetchall()
-	for rss in rss_servers:
-		id = rss[0]
-		url = rss[1]
-		print id, url
+	cursor.close()
+	return rss_servers
+		# id = rss[0]
+		# url = rss[1]
+		# print id, url
 
 
-get_list_of_rss_servers()
+rss_servers = get_list_of_rss_servers()
+
+for row in rss_servers:
+	print row
 
 db.close()		
 sys.exit()
