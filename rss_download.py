@@ -8,7 +8,7 @@ localfile = './rss.temp'
 urllib.urlretrieve(distantfile, localfile)
 
 
-if os.path.isfile(rss.temp):
+if os.path.isfile('rss.temp'):
 	print "file found";
 
 urllib.urlcleanup()
