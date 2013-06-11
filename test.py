@@ -35,6 +35,9 @@ rss_servers = get_list_of_rss_servers()
 for row in rss_servers:
 	print row
 
+def download_rss():
+	
+
 db.close()		
 sys.exit()
 		
