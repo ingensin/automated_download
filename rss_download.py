@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import feedparser
+import zlib
 
 python_wiki_rss_url = "http://www.torrentday.com/torrents/" \
                       "rss?download;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22"
