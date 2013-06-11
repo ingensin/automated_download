@@ -10,7 +10,7 @@ import sys
 db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL412", db="script")
 cursor = db.cursor()
 
-count = cursor.execute("SELECT * FROM wish_list")
+count = cursor.execute("SELECT * FROM wishlist")
 
 items = cursor.fetchall()
 for item in items:
@@ -25,7 +25,7 @@ sys.exit()
 
 
 watch_folder = '/volume1/script/test_watchfolder'
-url = 'http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22' 
+url = 'http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22'
 list_of_stuff_i_want = ["Life.on.fire", "Austin.City.Limits", "Moving.On"]
 
 
