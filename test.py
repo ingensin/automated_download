@@ -8,20 +8,32 @@ import sys
 
 
 db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL412", db="script")
-cursor = db.cursor()
+# cursor = db.cursor()
 
-count = cursor.execute("SELECT * FROM wishlist")
+# count = cursor.execute("SELECT * FROM wishlist")
 
-items = cursor.fetchall()
-for item in items:
-	print item
+# items = cursor.fetchall()
+# for item in items:
+	# print item
 
 
 
+
+def get_list_of_rss_servers:
+	cursor = db.cursor()
+	rss_server = cursor.execute("SELECT * FROM rss_server")
+	rss_servers = cursor.fetchall()
+	for rss in rss_servers:
+		id = rss['id']
+		url = rss['url']
+		print url
+
+
+get_list_of_rss_servers
+
+db.close()		
 sys.exit()
-
-
-
+		
 
 
 watch_folder = '/volume1/script/test_watchfolder'
@@ -63,3 +75,4 @@ for post in feed.entries:
 #urllib.urlretrieve ("http://www.example.com/sometorrent.torrent", "torrentname.torrent")
 
 #urllib.urlcleanup()
+db.close()
