@@ -26,7 +26,7 @@ def get_list_of_rss_servers():
 	for rss in rss_servers:
 		id = rss[0]
 		url = rss[1]
-		print id url
+		print id, url
 
 
 get_list_of_rss_servers()
