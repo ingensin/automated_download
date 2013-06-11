@@ -19,7 +19,7 @@ db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL41
 
 
 
-def get_list_of_rss_servers:
+def get_list_of_rss_servers():
 	cursor = db.cursor()
 	rss_server = cursor.execute("SELECT * FROM rss_server")
 	rss_servers = cursor.fetchall()
@@ -29,7 +29,7 @@ def get_list_of_rss_servers:
 		print url
 
 
-get_list_of_rss_servers
+get_list_of_rss_servers()
 
 db.close()		
 sys.exit()
