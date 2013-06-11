@@ -21,11 +21,11 @@ db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL41
 
 def get_list_of_rss_servers():
 	cursor = db.cursor()
-	rss_server = cursor.execute("SELECT * FROM rss_server")
+	rss_server = cursor.execute("SELECT id, url FROM rss_server")
 	rss_servers = cursor.fetchall()
 	for rss in rss_servers:
-		id = rss['id']
-		url = rss['url']
+		id = rss[0]
+		url = rss[1]
 		print url
 
 
