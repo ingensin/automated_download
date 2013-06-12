@@ -24,19 +24,27 @@ db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL41
 def get_list_of_rss_servers():
 	cursor = db.cursor()
 	rss_server = cursor.execute("SELECT id, url FROM rss_server")
-	rss_servers = cursor.fetchall()
+	all_servers = cursor.fetchall()
 	cursor.close()
-	return rss_servers
+	return all_servers
 		# id = rss[0]
 		# url = rss[1]
 		# print id, url
 
 
-rss_servers = get_list_of_rss_servers()
+all_servers = get_list_of_rss_servers()
 
 # for row in rss_servers:
 	# print row
-
+	
+def get_wishlist():
+	cursor = db.cursor()
+	wishlist = cursor.execute("SELECT id, name, rss_server_id, created FROM wishlist")
+	all_wishlists = cursor.fetchall()
+	cursor.close()
+	return all_wishlists
+	
+	
 def download_rss():
 	request = urllib2.Request('http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22')
 	request.add_header('Accept-encoding', 'gzip')
