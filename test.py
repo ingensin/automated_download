@@ -34,8 +34,8 @@ def get_list_of_rss_servers():
 
 rss_servers = get_list_of_rss_servers()
 
-for row in rss_servers:
-	print row
+# for row in rss_servers:
+	# print row
 
 def download_rss():
 	request = urllib2.Request('http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22')
@@ -46,6 +46,8 @@ def download_rss():
 		f = gzip.GzipFile(fileobj=buf)
 		data = f.read()
 		print data
+		
+rss = download_rss()
 	
 db.close()		
 sys.exit()
