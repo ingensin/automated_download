@@ -1,10 +1,12 @@
 #!/usr/bin/python
 
+from StringIO import StringIO
 import re
 import feedparser
-import urllib
+import urllib2
 import MySQLdb
 import sys
+import gzip
 
 
 db = MySQLdb.connect(host="localhost", port=3306, user="script", passwd="PfSQL412", db="script")
@@ -36,8 +38,15 @@ for row in rss_servers:
 	print row
 
 def download_rss():
+	request = urllib2.Request('http://www.torrentday.com/torrents/rss?download;11;7;u=428237;tp=887f3b1d10049f24d6fddf65d2139b22')
+	request.add_header('Accept-encoding', 'gzip')
+	response = urllib2.urlopen(request)
+	if response.info().get('Content-Encoding') == 'gzip':
+		buf = StringIO( response.read())
+		f = gzip.GzipFile(fileobj=buf)
+		data = f.read()
+		print data
 	
-
 db.close()		
 sys.exit()
 		
