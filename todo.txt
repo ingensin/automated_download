@@ -1,8 +1,8 @@
 
 
 V	1	Hente liste med rss fra db
-	2	Last ned rss (en enkelt)
-	3	Hente ønskeliste fra db
+V	2	Last ned rss (en enkelt)
+V	3	Hente ønskeliste fra db
 	4	søk for å finne torrent vi vil ha
 	5	Laste ned Torrent
 	6	Skriv/les huskeliste i hvilke torrents er lastet ned - ok.
