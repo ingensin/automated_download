@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 from StringIO import StringIO
+import xml.etree.ElementTree as xml
 import re
 import feedparser
 import urllib2
@@ -26,13 +27,9 @@ def get_list_of_rss_servers():
 	rss_server = cursor.execute("SELECT id, url FROM rss_server")
 	all_servers = cursor.fetchall()
 	cursor.close()
-	return all_servers
-		# id = rss[0]
-		# url = rss[1]
-		# print id, url
+	return all_rss_servers
 
-
-all_servers = get_list_of_rss_servers()
+all_rss_servers = get_list_of_rss_servers()
 
 # for row in rss_servers:
 	# print row
@@ -56,6 +53,11 @@ def download_rss():
 		print data
 		
 rss = download_rss()
+
+def get_wanted_torrents_from_rss()
+	root = xml.fromstring(StringFor__RSS__GoesHere)
+
+
 	
 db.close()		
 sys.exit()
