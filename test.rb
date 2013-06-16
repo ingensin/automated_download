@@ -97,7 +97,7 @@ feeds.each {|feed| feed.load_torrents!}
 
 for wish in wishlist
 	torrents_to_consider_for_download = wish.look_in(feeds)
-	torrents_to_consider_for_download.each {|torrent| torrent.download_to('c:\\temp')}
+	torrents_to_consider_for_download.each {|torrent| torrent.download_to('/tmp')}
 end
 
 
