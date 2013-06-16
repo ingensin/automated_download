@@ -1,3 +1,27 @@
+
+
+V	1	Hente liste med rss fra db
+V	2	Last ned rss (en enkelt)
+V	3	Hente ønskeliste fra db
+	4	søk for å finne torrent vi vil ha
+	5	Laste ned Torrent
+	6	Skriv/les huskeliste i hvilke torrents er lastet ned - ok.
+	7	Sjekk om fil er ok.
+	8	Slett fil hvis ikke ok.
+
+
+
+
+
+command for å hente liste fra transmission: transmission-remote -n transmission:PfTorrent412+ -l
+
+
+
+
+
+
+
+--------------------OLD------------------------------
 Lage databasene
 done	- series
 done	- movies
