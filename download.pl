@@ -68,7 +68,7 @@ for my $wish (@wishlist) {
 			my $file_name = basename $item->{link};
 			(my $local_filename, my $auth) = split(/\?/, $file_name); 
 			my $dest = $download_dir.$local_filename;
-			print "$local_filename $auth \n";
+			print "$local_filename $auth  --\n";
 			getstore($item->{link}, $dest);
 		}
 	}
